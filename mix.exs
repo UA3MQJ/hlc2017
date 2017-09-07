@@ -11,7 +11,7 @@ defmodule MiniApp.Mixfile do
   end
 
   def application do
-    [applications: [:logger, :plug, :cowboy],
+    [applications: [:logger, :poison, :plug, :cowboy],
      mod: {MiniApp, []}]
   end
 
@@ -19,6 +19,9 @@ defmodule MiniApp.Mixfile do
     [
      {:plug, "~>1.0"},
      {:cowboy, "~>1.0"},
+     {:poison, "~> 2.0"},
+     # {:benchwarmer, "~> 0.0.2"},
+     # {:flow, "~> 0.11"},
      {:distillery, "~> 1.0"}
     ]
   end
